@@ -1,6 +1,7 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 
 module.exports = {
 	cache: true,
@@ -36,9 +37,7 @@ module.exports = {
 			{
 				test: /\.(scss|css)$/,
 				use: [
-					{
-						loader: MiniCssExtractPlugin.loader,
-					},
+					MiniCssExtractPlugin.loader,
 					{
 						loader: 'css-loader',
 						options: {
@@ -78,10 +77,17 @@ module.exports = {
 			},
 		],
 	},
+	optimization: {
+		minimizer: [
+			new CssMinimizerPlugin(),
+		],
+		minimize: true,
+	},
 
 	plugins: [
+		new RemoveEmptyScriptsPlugin(),
 		new MiniCssExtractPlugin({
-			filename: '[name].css',
+			filename: '[name].min.css',
 		}),
 		new CopyWebpackPlugin({
 			patterns: [
@@ -91,7 +97,6 @@ module.exports = {
 				},
 			],
 		}),
-		new FixStyleOnlyEntriesPlugin(),
 	],
 
 };
