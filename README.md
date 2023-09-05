@@ -7,3 +7,30 @@ Webpackでの環境構築です。
 ```
 npm install
 ```
+## SassとJSのビルドのみを行う (画像圧縮を行わない)
+### 開発中
+```
+npm run webpack:dev
+```
+### 本番ビルド
+```
+npm run webpack:dev
+```
+## 画像圧縮のみを行う
+### 画像の変更をwatchします
+```
+npm run sharp:watch
+```
+### 全ての画像を処理します。
+```
+npm run sharp:all
+```
+## ビルドと画像圧縮をどちらも行う
+### 開発中
+```
+npm run dev
+```
+### 本番ビルド
+```
+npm run build
+```
