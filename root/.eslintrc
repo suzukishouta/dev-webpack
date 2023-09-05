@@ -22,7 +22,7 @@
 		"no-tabs": 0,
 		"import/no-extraneous-dependencies":[
 			"error", {
-				"devDependencies": ["**/webpack.common.js","**/webpack.prod.js","**/webpack.dev.js"],
+				"devDependencies": ["**/webpack.common.js","**/webpack.prod.js","**/webpack.dev.js","**/sharp-all.mjs", "**/sharp-watch.mjs"],
 				"peerDependencies": false
 			}
 		]

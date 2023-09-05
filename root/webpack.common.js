@@ -1,7 +1,6 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	cache: true,
@@ -88,14 +87,6 @@ module.exports = {
 		new RemoveEmptyScriptsPlugin(),
 		new MiniCssExtractPlugin({
 			filename: '[name].min.css',
-		}),
-		new CopyWebpackPlugin({
-			patterns: [
-				{
-					from: `${__dirname}/src/images/`,
-					to: `${__dirname}/images/`,
-				},
-			],
 		}),
 	],
 
