@@ -14,7 +14,7 @@ npm run webpack:dev
 ```
 ### 本番ビルド
 ```
-npm run webpack:dev
+npm run webpack:build
 ```
 ## 画像圧縮のみを行う
 ### 画像の変更をwatchします
