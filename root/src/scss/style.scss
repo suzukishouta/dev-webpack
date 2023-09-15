@@ -1,27 +1,7 @@
-body {
-	font-weight: bold;
-	color: red;
-
-	p {
-		color: rgb(255 145 0);
-
-		@media screen and (width >= 768px) {
-			display: flex;
-			color: #555;
-		}
-	}
-}
-
-@media screen and (width >= 768px) {
-	div {
-		display: flex;
-		width: 50px;
-	}
-}
-
-.airplane{
-	display: inline-block;
-	width: 1em;
-	height: 5em;
-	background: url("../images/icon/icon_airplane_black.svg") no-repeat center / cover;
-}
+@charset "utf-8";
+@use "base";
+@use "layout";
+@use "module";
+@use "helper";
+@use "unique";
+@use "program";
