@@ -6,6 +6,10 @@
 	"rules": {
 		"indentation": "tab",
 		"selector-class-pattern": null,
-		"scss/at-extend-no-missing-placeholder": null
+		"scss/at-extend-no-missing-placeholder": null,
+		"color-hex-case": "lower",
+		"selector-list-comma-newline-after": "always",
+		"block-opening-brace-space-before": "always",
+		"block-opening-brace-newline-after": "always"
 	}
 }
