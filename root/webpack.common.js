@@ -76,12 +76,12 @@ module.exports = {
 			},
 		],
 	},
-	optimization: {
-		minimizer: [
-			new CssMinimizerPlugin(),
-		],
-		minimize: true,
-	},
+	// optimization: {
+	// 	minimizer: [
+	// 		new CssMinimizerPlugin(),
+	// 	],
+	// 	minimize: true,
+	// },
 
 	plugins: [
 		new RemoveEmptyScriptsPlugin(),
