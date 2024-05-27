@@ -56,5 +56,8 @@
     "ress": "^5.0.2",
     "slick-carousel": "^1.8.1",
     "throttle-debounce": "^5.0.0"
+  },
+  "volta": {
+    "node": "20.13.1"
   }
 }
