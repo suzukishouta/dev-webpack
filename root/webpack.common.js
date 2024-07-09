@@ -1,5 +1,5 @@
+const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 
 module.exports = {
@@ -13,8 +13,8 @@ module.exports = {
 	output: {
 		path: `${__dirname}/dest`,
 		filename: '[name].js',
-		clean: true,
 		assetModuleFilename: 'assets/[name][ext]',
+		clean: true,
 	},
 
 	module: {
@@ -26,9 +26,7 @@ module.exports = {
 					{
 						loader: 'babel-loader',
 						options: {
-							presets: [
-								'@babel/preset-env',
-							],
+							presets: ['@babel/preset-env'],
 						},
 					},
 				],
@@ -76,18 +74,11 @@ module.exports = {
 			},
 		],
 	},
-	// optimization: {
-	// 	minimizer: [
-	// 		new CssMinimizerPlugin(),
-	// 	],
-	// 	minimize: true,
-	// },
 
 	plugins: [
-		new RemoveEmptyScriptsPlugin(),
 		new MiniCssExtractPlugin({
 			filename: '[name].min.css',
 		}),
+		new RemoveEmptyScriptsPlugin(),
 	],
-
 };
