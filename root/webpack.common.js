@@ -77,7 +77,7 @@ module.exports = {
 
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: '[name].min.css',
+			filename: '[name].css',
 		}),
 		new RemoveEmptyScriptsPlugin(),
 	],
