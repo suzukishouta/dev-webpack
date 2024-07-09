@@ -34,3 +34,17 @@ npm run dev
 ```
 npm run build
 ```
+## VSCodeの設定
+### プラグインのインストール
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+### setting.jsonの必須項目
+```
+"editor.defaultFormatter": "esbenp.prettier-vscode",
+"editor.formatOnSave": true,
+"editor.codeActionsOnSave": {
+  "source.fixAll.eslint": "explicit",
+  "source.fixAll.stylelint": "explicit"
+},
+```
