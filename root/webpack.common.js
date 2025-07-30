@@ -33,6 +33,7 @@ module.exports = {
 			},
 			{
 				test: /\.(scss|css)$/,
+				sideEffects: true,
 				use: [
 					MiniCssExtractPlugin.loader,
 					{
