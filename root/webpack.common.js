@@ -81,5 +81,5 @@ module.exports = [
 		true // ← bundle 側で clean する
 	),
 	// 出力先を'dest'以外にしたいファイルは下記のように追加してください。
-	// createConfig({ custom: `${__dirname}/src/js/custom.js` }, path.resolve(__dirname, 'include/edit')),
+	createConfig({ custom: `${__dirname}/src/js/custom.js` }, path.resolve(__dirname, 'include/edit'), true),
 ];
